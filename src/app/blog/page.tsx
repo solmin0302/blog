@@ -1,3 +1,4 @@
+//post list page
 const Blog = () => {
   return (
     <div>

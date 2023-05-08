@@ -4,7 +4,7 @@ const Footer = () => {
       <div className="flex justify-center gap-4 items-center pt-4 border-t-2 w-36">
         <a
           href="mailto:solgo123@gmail.com"
-          className="hover:scale-110 transition-transform duration-500 hover:text-green-500 hover:fill-green-500 dark:fill-white dark:hover:fill-green-500"
+          className="hover:text-violet-500 hover:fill-violet-500 dark:fill-white dark:hover:fill-violet-500"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -17,7 +17,7 @@ const Footer = () => {
         </a>
         <a
           href="https://github.com/solmin0302"
-          className="hover:scale-110 transition-transform duration-500 hover:text-green-500 hover:fill-green-500 dark:fill-white dark:hover:fill-green-500"
+          className="hover:text-violet-500 hover:fill-violet-500 dark:fill-white dark:hover:fill-violet-500"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

@@ -9,7 +9,11 @@ const MainLayout = ({ children }: MainLayoutProps) => {
   return (
     <>
       <Header />
-      <main>{children}</main>
+      <main className="">
+        <div className="max-w-screen-md flex flex-col px-10 m-auto">
+          {children}
+        </div>
+      </main>
       <Footer />
     </>
   );
