@@ -1,8 +1,8 @@
 import localFont from "next/font/local";
-import "./globals.css";
+import "../styles/globals.css";
 
 export const Pretendard = localFont({
-  src: "../../public/fonts/PretendardVariable.woff2",
+  src: "../assets/fonts/PretendardVariable.woff2",
   fallback: ["system-ui", "arial"],
 });
 
