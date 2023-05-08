@@ -3,7 +3,7 @@ const Footer = () => {
     <footer className="w-full font-mono flex flex-col justify-center items-center pt-10 pb-6 transition duration-500 bg-white dark:bg-[#111111] dark:text-white text-black">
       <div className="flex justify-center gap-4 items-center pt-4 border-t-2 w-36">
         <a
-          href="mailto:본인의 이메일 주소 기입"
+          href="mailto:solgo123@gmail.com"
           className="hover:scale-110 transition-transform duration-500 hover:text-green-500 hover:fill-green-500 dark:fill-white dark:hover:fill-green-500"
         >
           <svg
@@ -16,7 +16,7 @@ const Footer = () => {
           </svg>
         </a>
         <a
-          href="본인의 github 주소 기입"
+          href="https://github.com/solmin0302"
           className="hover:scale-110 transition-transform duration-500 hover:text-green-500 hover:fill-green-500 dark:fill-white dark:hover:fill-green-500"
         >
           <svg
