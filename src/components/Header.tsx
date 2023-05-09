@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Nav from "./Nav";
 
-const Header = () => {
+export default function Header() {
   return (
     <>
       <Head>
@@ -20,6 +20,4 @@ const Header = () => {
       </header>
     </>
   );
-};
-
-export default Header;
+}

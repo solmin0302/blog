@@ -3,7 +3,7 @@ import { navLinks } from "@/data/navLinks";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const Nav = () => {
+export default function Nav() {
   const curPath = usePathname();
 
   const defaultLinkStyle = `mr-5 text-lg transition hover:scale-125 hover:text-violet-500 duration-250`;
@@ -27,6 +27,4 @@ const Nav = () => {
       })}
     </nav>
   );
-};
-
-export default Nav;
+}

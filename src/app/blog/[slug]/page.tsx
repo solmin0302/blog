@@ -1,10 +1,8 @@
 // post detail page
-const Post = () => {
+export default function Post() {
   return (
     <div>
       <p>Post</p>
     </div>
   );
-};
-
-export default Post;
+}

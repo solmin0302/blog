@@ -5,7 +5,7 @@ import Header from "./Header";
 type MainLayoutProps = {
   children: ReactNode;
 };
-const MainLayout = ({ children }: MainLayoutProps) => {
+export default function MainLayout({ children }: MainLayoutProps) {
   return (
     <>
       <Header />
@@ -17,6 +17,4 @@ const MainLayout = ({ children }: MainLayoutProps) => {
       <Footer />
     </>
   );
-};
-
-export default MainLayout;
+}
