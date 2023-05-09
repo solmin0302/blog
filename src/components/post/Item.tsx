@@ -1,9 +1,7 @@
-const Item = () => {
+export default function Item() {
   return (
     <div>
-      <p>item1</p>
+      <p>Post Item</p>
     </div>
   );
-};
-
-export default Item;
+}

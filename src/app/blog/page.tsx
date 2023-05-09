@@ -1,13 +1,17 @@
-import { getDatabase } from "@/lib/api/notion";
+import getTasksFromNotionDatabase from "@/lib/api/notion";
+import Link from "next/link";
 
 //post list page
 export default async function Blog() {
-  const data = await getDatabase();
+  const data = await getTasksFromNotionDatabase();
 
   return (
-    <div>
-      <p>Blog</p>
-      <p>{data.map((v) => v.id)}</p>
+    <div className="flex flex-col">
+      {data.map(({ pageId, title }) => (
+        <Link key={pageId} href={`/blog/${pageId}`}>
+          {title}
+        </Link>
+      ))}
     </div>
   );
 }
