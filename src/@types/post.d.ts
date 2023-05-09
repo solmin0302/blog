@@ -3,6 +3,7 @@ declare global {
     pageId: string;
     description: string;
     title: string;
+    date: string;
   }
 }
 

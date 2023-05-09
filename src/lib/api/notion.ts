@@ -10,11 +10,10 @@ const notion = new Client({
 
 const n2m = new NotionToMarkdown({ notionClient: notion });
 
-export const testNotionToMd = async (pageId: string) => {
+export const getNotionPageContent = async (pageId: string) => {
   const mdblocks = await n2m.pageToMarkdown(pageId);
-  const string = n2m.toMarkdownString(mdblocks);
 
-  return string;
+  return n2m.toMarkdownString(mdblocks);
 };
 
 /**
@@ -129,6 +128,7 @@ export default async function getPagesFromNotionDatabase(): Promise<
 
   const tasks = [];
   for (const page of pages) {
+    // 타입가드로 partial narrow 하기
     if (!isFullPage(page)) continue;
     // TODO: Tag 필드 추후 추가 예정
     const pageId = page.id;
@@ -148,7 +148,11 @@ export default async function getPagesFromNotionDatabase(): Promise<
     });
     const title = getTitlePropertyValue(titlePropertyItems);
 
-    tasks.push({ pageId, description, title });
+    const date = new Intl.DateTimeFormat("en-US", { dateStyle: "full" }).format(
+      new Date(page.last_edited_time)
+    );
+
+    tasks.push({ pageId, description, title, date });
   }
 
   return tasks;
