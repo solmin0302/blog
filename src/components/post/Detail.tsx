@@ -13,12 +13,14 @@ type DetailProps = {
 export default function Detail({ content }: DetailProps) {
   return (
     <div>
-      <ReactMarkdown
-        rehypePlugins={[rehypeRaw]}
-        remarkPlugins={[remarkGfm, remarkBreaks, remarkParse]}
-      >
-        {content}
-      </ReactMarkdown>
+      <article className="prose prose-slate">
+        <ReactMarkdown
+          rehypePlugins={[rehypeRaw]}
+          remarkPlugins={[remarkGfm, remarkBreaks, remarkParse]}
+        >
+          {content}
+        </ReactMarkdown>
+      </article>
     </div>
   );
 }
