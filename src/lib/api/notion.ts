@@ -152,7 +152,10 @@ export default async function getPagesFromNotionDatabase(): Promise<
       new Date(page.last_edited_time)
     );
 
-    tasks.push({ pageId, description, title, date });
+    const postCoverUrl =
+      page.cover?.type === "file" ? page.cover.file.url : undefined;
+
+    tasks.push({ pageId, description, title, date, postCoverUrl });
   }
 
   return tasks;
