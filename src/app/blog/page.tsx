@@ -1,40 +1,17 @@
+import List from "@/components/post/List";
 import getTasksFromNotionDatabase from "@/lib/api/notion";
-import Image from "next/image";
-import Link from "next/link";
 
-//post list page
-export default async function Blog() {
+async function getData() {
   const data = await getTasksFromNotionDatabase();
+  return data;
+}
+
+export default async function Page() {
+  const data = await getData();
 
   return (
     <div className="flex flex-col">
-      {data.map(({ pageId, title, description, date, postCoverUrl }) => (
-        <Link href={`/blog/${pageId}`} passHref key={pageId}>
-          <div className="w-full my-7 hover:scale-105 transition duration-75">
-            {postCoverUrl && (
-              <div className="relative">
-                <Image
-                  src={postCoverUrl}
-                  alt="postCover"
-                  width="0"
-                  height="0"
-                  sizes="100vw"
-                  className="w-full h-400"
-                />
-              </div>
-            )}
-            <div
-              className={`font-extrabold text-2xl mt-2 hover:text-violet-500`}
-            >
-              {title}
-            </div>
-            <div className={`font-medium text-gray-600 text-xl mt-1`}>
-              {description}
-            </div>
-            <div className="font-medium text-xs text-gray-400 mt-1">{date}</div>
-          </div>
-        </Link>
-      ))}
+      <List postList={data} />
     </div>
   );
 }
