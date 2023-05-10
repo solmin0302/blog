@@ -106,7 +106,7 @@ function getRichTextPropertyValue(
 /**
  * Gets pages from the database.
  */
-export default async function getPagesFromNotionDatabase(): Promise<
+export async function getPagesFromNotionDatabase(): Promise<
   Array<NarrowNotionPageType>
 > {
   const pages = [];
@@ -118,6 +118,7 @@ export default async function getPagesFromNotionDatabase(): Promise<
       database_id: NEXT_PUBLIC_DATABASE_KEY ?? "",
       start_cursor: cursor,
     });
+
     pages.push(...results);
     if (!next_cursor) {
       break;
@@ -159,4 +160,11 @@ export default async function getPagesFromNotionDatabase(): Promise<
   }
 
   return tasks;
+}
+
+export async function getMeFromNotion() {
+  const bot = await notion.users.retrieve({
+    user_id: "8f45512a-76b7-4f48-a4ce-887ee9b75253",
+  });
+  return bot;
 }

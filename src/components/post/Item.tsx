@@ -6,9 +6,10 @@ type ItemProps = {
 };
 export default function Item({ post }: ItemProps) {
   const { pageId, postCoverUrl, title, description, date } = post;
+
   return (
     <Link href={`/blog/${pageId}`} passHref key={pageId}>
-      <div className="w-full my-7 hover:scale-105 transition duration-75">
+      <div className="w-full my-7">
         {postCoverUrl && (
           <div className="relative">
             <Image
@@ -16,7 +17,6 @@ export default function Item({ post }: ItemProps) {
               alt="postCover"
               width="0"
               height="0"
-              sizes="100vw"
               className="w-full h-400"
             />
           </div>

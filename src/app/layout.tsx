@@ -1,5 +1,7 @@
 import MainLayout from "@/components/MainLayout";
+import { getCustomMeta } from "@/data/metadatas";
 import "@/styles/globals.css";
+import { Metadata } from "next";
 import localFont from "next/font/local";
 
 export const Pretendard = localFont({
@@ -7,10 +9,7 @@ export const Pretendard = localFont({
   fallback: ["system-ui", "arial"],
 });
 
-export const metadata = {
-  title: "solmin.io",
-  description: "blog project using Next.js",
-};
+export const metadata: Metadata = getCustomMeta({});
 
 export default function RootLayout({
   children,

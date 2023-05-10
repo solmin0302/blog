@@ -1,8 +1,8 @@
 import List from "@/components/post/List";
-import getTasksFromNotionDatabase from "@/lib/api/notion";
+import { getPagesFromNotionDatabase } from "@/lib/api/notion";
 
 async function getData() {
-  const data = await getTasksFromNotionDatabase();
+  const data = await getPagesFromNotionDatabase();
   return data;
 }
 

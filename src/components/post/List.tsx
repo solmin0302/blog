@@ -6,7 +6,7 @@ type ListProps = {
 
 export default function List({ postList }: ListProps) {
   return (
-    <div>
+    <div className="flex flex-col">
       {postList.map((post) => (
         <Item key={post.pageId} post={post} />
       ))}
