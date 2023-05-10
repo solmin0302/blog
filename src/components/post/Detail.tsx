@@ -12,7 +12,7 @@ type DetailProps = {
 
 export default function Detail({ content }: DetailProps) {
   return (
-    <div>
+    <div className="my-7">
       <article className="prose prose-slate">
         <ReactMarkdown
           rehypePlugins={[rehypeRaw]}
