@@ -6,14 +6,14 @@ import SocialLink from './SocialLink';
 // TODO: 추후 User Database 분리 후 props 정리를 해보자
 export default function Profile() {
   return (
-    <div className="flex flex-row my-5 gap-5">
+    <div className="flex flex-row my-5 gap-6">
       <div className="flex-1">
         <Image
           src={profilePictureSrc}
           alt="profilePicture"
           width={0}
           height={0}
-          className="w-full h-400 max-w-300 rounded-md"
+          className="w-full h-400 max-w-300"
         />
       </div>
       <div className="flex-1 flex flex-col gap-3 justify-center">

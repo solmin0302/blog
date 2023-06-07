@@ -3,6 +3,13 @@ declare global {
     title: string;
     link: string;
   }
+  interface NarrowNotionPageType {
+    pageId: string;
+    description: string;
+    title: string;
+    date: string;
+    postCoverUrl?: string;
+  }
 }
 
 export {};
