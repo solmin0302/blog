@@ -1,12 +1,12 @@
-# 개인 블로그
+# Private blog
 
-## 사용 스택
+## Used Stack
 
 ```typescript
 "react": "18.2.0",
 "next": "13.4.1", as FrameWork
 "tailwindcss": "3.3.2", as Styling
-// 노션 데이터베이스 api 콜
+// notion library helping call api
 "@notionhq/client": "2.2.5", as Database
 ...
 ```
@@ -17,9 +17,9 @@
 
 <br/>
 
-## 동작 설명
+## Description
 
-- 서버리스를 고민하다 **노션** 워크스페이스의 데이터베이스를 서버 대용으로 사용하고 있습니다.
+- project using a database in the **notion** workspace as a server to implement serverless architecture.
 
 <br/>
 
@@ -27,26 +27,25 @@
 
 ## TODO
 
-- [ ] About 기획 후 제작하기
-- [x] 각 포스트별 SEO 적용해보기 (2023.06.07)
-- [x] NextJs 고도화 해보기
-- [x] Tag 반영하기 (2023.06.07)
+- [x] Applying SEO each post (2023.06.07)
+- [x] Use Nextjs 13 version
+- [x] Add Tag Features (2023.06.07)
 
 ---
 
 ## 참고
 
 - _[https://miryang.dev/blog/build-blog-with-nextjs](https://miryang.dev/blog/build-blog-with-nextjs)_ <br/>
-  Nextjs 입문과 블로그의 디자인을 참고하여 제작하였습니다.
+  referring to the introduction of next js and the design of the blog.
 
 - _[https://github.com/makenotion/notion-sdk-js](https://github.com/makenotion/notion-sdk-js)_ <br/>
-  Notion SDK 공식 라이브러리
+  Notion SDK official library
 
 - _[https://developers.notion.com/docs](https://developers.notion.com/docs)_ <br/>
-  노션 개발자 문서 (API ENDPOINT 참고)
+  Notion API document (API ENDPOINT 참고)
 
 - _[https://tailwindcss.com/docs/installation](https://tailwindcss.com/docs/installation)_ <br/>
-  tailwindcss 공식 문서
+  tailwindcss official
 
 - _[https://nextjs.org](https://nextjs.org)_ <br/>
-  Next.js 공식 문서
+  Next.js official
