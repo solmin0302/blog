@@ -19,8 +19,8 @@ export default function Profile() {
       <div className="flex-1 flex flex-col gap-3 justify-center">
         <h1 className="text-xl">
           <strong>
-            안녕하세요 👋
-            <br /> 프론트엔드 개발자 서솔민입니다.
+            Hi there 👋
+            <br /> Im working as Frontend developer.
           </strong>
         </h1>
         <div className="flex flex-col gap-2 w-fit">
